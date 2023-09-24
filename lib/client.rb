@@ -8,7 +8,7 @@ class RudisClient
     def initialize(host, port)
         @host = host
         @port = port
-        @client = TCPSocket.open('0.0.0.0', 6379)
+        @client = TCPSocket.open(@host, @port)
     end
 
     def set(key, value)
